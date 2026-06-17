@@ -1,0 +1,1 @@
+const a=new Set(["HR Admin","HR_ADMIN"]),r=new Set(["Branch Manager","BRANCH_MANAGER"]);function t(n){return a.has(n)}function e(n){return r.has(n)}function i(n){return t(n)||e(n)}export{e as a,i as b,t as i};
