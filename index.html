@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f4efe7" />
     <title>Dental HR | Clinic Operations</title>
+    <script>
+      // SPA route recovery from 404.html redirect
+      (function(){
+        var p = new URLSearchParams(window.location.search).get('p');
+        if (p) {
+          window.history.replaceState(null, '', '/dental-hr-poc' + p);
+        }
+      })();
+    </script>
     <script type="module" crossorigin src="/dental-hr-poc/assets/index-CHkPKpTo.js"></script>
     <link rel="stylesheet" crossorigin href="/dental-hr-poc/assets/index-B9Dr6-jc.css">
   </head>

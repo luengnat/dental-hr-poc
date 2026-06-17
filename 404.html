@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dental HR | Redirecting…</title>
+<script>
+// SPA redirect: GitHub Pages 404 handler
+// Copies the current path into a query param, then redirects to /
+// so index.html loads and React Router can parse the real route.
+var path = window.location.pathname.replace(/\/dental-hr-poc\/?/, '/');
+var seg = path.replace(/^\//, '').split('/')[0];
+if (seg && seg !== 'index.html') {
+  window.location.replace('/dental-hr-poc/?p=' + encodeURIComponent(path));
+} else {
+  window.location.replace('/dental-hr-poc/');
+}
+</script>
+</head>
+<body></body>
+</html>
