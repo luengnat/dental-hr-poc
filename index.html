@@ -10,6 +10,14 @@
     <link rel="stylesheet" crossorigin href="/dental-hr-poc/assets/index-Cl59ESDf.css">
   </head>
   <body>
+    <script>
+      /* GitHub Pages SPA redirect — restores deep-link path saved by 404.html */
+      (function () {
+        var r = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (r && r !== location.href) history.replaceState(null, null, r);
+      })();
+    </script>
     <div id="root"></div>
   </body>
 </html>
