@@ -1,0 +1,1 @@
+import{r as s}from"./index-o7V_50-2.js";function o(){const[,n]=s.useState(0);return s.useEffect(()=>{const e=()=>n(t=>t+1);return window.addEventListener("session-change",e),()=>window.removeEventListener("session-change",e)},[]),s.useCallback(()=>n(e=>e+1),[])}export{o as u};
