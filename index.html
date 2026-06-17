@@ -11,11 +11,12 @@
   </head>
   <body>
     <script>
-      /* GitHub Pages SPA redirect — restores deep-link path saved by 404.html */
+      /* GitHub Pages SPA redirect — 404.html appends ?/path; restore it here */
       (function () {
-        var r = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (r && r !== location.href) history.replaceState(null, null, r);
+        var s = location.search;
+        if (s.substr(0, 2) === '?/') {
+          history.replaceState(null, null, location.pathname + s.substr(2).replace(/~and~/g, '&'));
+        }
       })();
     </script>
     <div id="root"></div>
