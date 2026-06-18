@@ -1,0 +1,1 @@
+import{M as t}from"./index-n-5sjHFs.js";function a(n){return t.find(r=>r.id===n)}function i(n){return t.filter(r=>r.role===n).map(r=>r.id)}function o(n){const r=a(n);return r?r.role==="Branch Manager"?i("HR Admin"):t.filter(e=>e.role==="Branch Manager"&&e.branch===r.branch).map(e=>e.id):[]}function u(){return{managerOf:o,usersWithRole:i}}export{u as b};
