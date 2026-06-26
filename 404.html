@@ -1,23 +1,17 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/window.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f4efe7" />
-    <title>Dental HR | Clinic Operations</title>
-  </head>
-  <body>
-    <script>
-      /* GitHub Pages SPA redirect — 404.html appends ?/path; restore it here */
-      (function () {
-        var s = location.search;
-        if (s.substring(0, 2) === '?/') {
-          history.replaceState(null, null, location.pathname + s.substring(2).replace(/~and~/g, '&'));
-        }
-      })();
-    </script>
-    <script>var l=window.location;if(l.pathname==='/dental-hr-poc/404.html'){l.replace(l.origin+'/dental-hr-poc/');}else{l.replace(l.origin+'/dental-hr-poc/'+l.pathname.slice(l.pathname.indexOf('/',1)+1)+l.search);}</script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dental HR | Redirecting…</title>
+<script>
+(function(){
+  var base="/dental-hr-poc/";
+  var seg=location.pathname.slice(base.length);
+  if(seg) location.replace(base+"?/"+seg+location.search+location.hash);
+  else location.replace(base);
+})();
+</script>
+</head>
+<body><p>Redirecting…</p></body>
 </html>
